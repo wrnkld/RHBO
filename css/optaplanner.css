@@ -1,0 +1,109 @@
+body {
+  background: #fafafa;
+}
+/* table stuff */
+table {
+  background: #ffffff;
+  border-bottom: 1px solid #c4c4c4;
+  margin: 10px 0;
+}
+th, td {
+  border-top: 1px solid #c4c4c4;
+  padding: 15px 10px;
+}
+th {
+  background: #f5f5f5;
+}
+/* side items */
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100%;
+}
+.search-pf-side, .dds-pf-side {
+  padding: 10px 0;
+}
+.timewindow {
+  color: #9B9B9B;
+}
+/* sticky toolbar */
+#toolbar {
+  background: #fafafa;
+  padding: 10px 0;
+  z-index: 2;
+}
+.sticky {
+  box-shadow: 0 2px 3px rgba(3,3,3,.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* map */
+.map {
+  background-color: #f5f5f5;
+  border: 1px solid #c4c4c4;
+  height: calc(100vh - 170px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: center;
+  min-height: 200px;
+}
+/* blank state */
+.blank-slate-pf {
+  border: 1px solid #c4c4c4;
+  height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.blank-slate-pf .blank-slate-pf-main-action,
+.blank-slate-pf .blank-slate-pf-secondary-action {
+  margin-top: 0;
+}
+/* notofications dot */
+.bluedot {
+  background-color: #0088ce;
+  border-radius: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 2px 4px;
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  top: 8px;
+}
+/* navbar */
+.navbar-pf .navbar-header {
+  border-bottom: 0;
+  float: none;
+}
+.navbar-pf .navbar-primary {
+  border-top: 1px solid #292929;
+  float: left;
+  width: 100%;
+}
+.navbar-pf .navbar-toggle {
+  border: 0;
+  margin: 0;
+  padding: 15px 20px;
+}
+.navbar-pf a.navbar-brand:hover,
+.navbar-pf a.navbar-brand:active {
+  color: #d1d1d1;
+}
+.navbar-pf .navbar-primary.persistent-secondary>li>.navbar-persistent {
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility>li>a {
+    padding: 12px;
+  }
+  .navbar-pf .navbar-utility li.dropdown>.dropdown-toggle {
+    padding-left: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-pf .navbar-utility li.dropdown>.dropdown-toggle {
+    padding-left: 20px;
+  }
+}

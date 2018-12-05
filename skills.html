@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptaPlanner</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
+  <link href="css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-pf">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-5">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">OptaPlanner</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-collapse-5">
+      <ul class="nav navbar-nav navbar-utility">
+        <li><a href="notifications.html"><i class="fa fa-bell"></i><span class="bluedot"></span></a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tenants <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Call Center</li>
+            <li><a href="#">Santa Barbara (70 employees)</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Factory Assembly</li>
+            <li><a href="#">El Paso (168 employees)</a></li>
+            <li><a href="#">Fort Collins (168 employees)</a></li>
+            <li><a href="#">Little Rock (84 employees)</a></li>
+            <li><a href="#">Mt. Vernon (336 employees)</a></li>
+            <li><a href="#">San Francisco (84 employees)</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Guard Security</li>
+            <li><a href="#">Las Vegas (70 employees)</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Hospital</li>
+            <li><a href="#">Los Angeles (98 employees)</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Add Tenant</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Christopher <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Rest API</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-primary">
+        <li class="active"><a href="skills.html">Skills</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="employees.html">Employees</a></li>
+        <li><a href="rotation.html">Rotation</a></li>
+        <li><a href="availability.html">Availability</a></li>
+        <li><a href="roster.html">Roster</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Skills</h1>
+      </div>
+    </div>
+    <div class="row" id="toolbar">
+      <div class="col-xs-3">
+        <form class="search-pf has-button">
+          <div class="form-group has-clear">
+            <div class="search-pf-input-group">
+              <label for="search1" class="sr-only">Search</label>
+              <input id="search1" type="search" class="form-control" placeholder="Search">
+              <button type="button" class="clear" aria-hidden="true" style="display: none;"><span class="pficon pficon-close"></span></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-9">
+        <div style="display: inline; float: right;">
+          <span style="margin: auto 8px;">1 - 10 of 98</span>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" style="padding: 2px 10px;"><span class="i fa fa-angle-left"></span></button>
+            <button type="button" class="btn btn-default" style="padding: 2px 10px;"><span class="i fa fa-angle-right"></span></button>
+          </div>
+          <button type="button" class="btn btn-primary" style="margin-left: 10px;">Add Shift</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 100%">Skill Name</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Skill Name</td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.14.0/js/patternfly.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <script> window.onscroll = function() {myFunction()}; var header = document.getElementById("toolbar"); var sticky = header.offsetTop; function myFunction() { if (window.pageYOffset > sticky) { header.classList.add("sticky"); } else { header.classList.remove("sticky"); } } </script>
+</body>
+</html>
