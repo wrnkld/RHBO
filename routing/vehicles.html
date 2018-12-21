@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OptaPlanner</title>
+  <title>OptaPlanner - Vehicle Routing - Vehicles</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
-  <link href="css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="../css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
   <nav class="navbar navbar-default navbar-pf">
@@ -17,11 +17,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">OptaPlanner</a>
+      <a class="navbar-brand" href="../main.html">OptaPlanner</a>
     </div>
     <div class="collapse navbar-collapse navbar-collapse-5">
       <ul class="nav navbar-nav navbar-utility">
-        <li><a href="notificationz.html"><i class="fa fa-bell"></i><span class="bluedot"></span></a></li>
+        <li><a href="notifications.html"><i class="fa fa-bell"></i><span class="bluedot"></span></a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tenants <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Category</li>
@@ -31,7 +31,7 @@
             <li><a href="#">Location (84 employees)</a></li>
             <li class="divider"></li>
             <li class="dropdown-header">Category</li>
-            <li><a href="#">Location (98 employees)</a></li>
+            <li><a href="#">Location (84 employees)</a></li>
             <li><a href="#">Location (84 employees)</a></li>
             <li><a href="#">Location (84 employees)</a></li>
             <li><a href="#">Location (84 employees)</a></li>
@@ -46,14 +46,14 @@
             <li><a href="#">Rest API</a></li>
             <li><a href="#">Settings</a></li>
             <li class="divider"></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="../index.html">Log Out</a></li>
           </ul>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-primary">
         <li><a href="depots.html">Depots</a></li>
         <li class="active"><a href="vehicles.html">Vehicles</a></li>
-        <li><a href="locationz.html">Locations</a></li>
+        <li><a href="locations.html">Locations</a></li>
         <li><a href="route.html">Route</a></li>
       </ul>
     </div>
@@ -96,20 +96,74 @@
           <table>
             <thead>
               <tr>
-                <th style="width: 20%">Plate Number</th>
-                <th style="width: 20%">Make</th>
-                <th style="width: 20%">Model</th>
-                <th style="width: 20%">Cost per Mile</th>
-                <th style="width: 20%">Depot</th>
+                <th style="width: 25%">Plate Number</th>
+                <th style="width: 25%">Type</th>
+                <th style="width: 25%">Capacity</th>
+                <th style="width: 25%">Depot</th>
                 <th></th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td><input type="text" placeholder="ABC 123" style="width: 100%;"></td>
+                <td>
+                  <select class="selectpicker form-control">
+                    <option value="">Car</option>
+                    <option value="">Van</option>
+                    <option value="">Truck</option>
+                    <option value="">Something</option>
+                  </select>
+                </td>
+                <td><input type="text" placeholder="12" style="width: 100%;"></td>
+                <td>
+                  <select class="selectpicker form-control">
+                    <option value="">Depot Name 1</option>
+                    <option value="">Depot Name 2</option>
+                    <option value="">Depot Name 3</option>
+                    <option value="">Depot Name 4</option>
+                  </select>
+                </td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-check"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-times"></i></a></td>
+              </tr>
+              <tr>
+                <td><input type="text" value="TLN 117" style="width: 100%;"></td>
+                <td>
+                  <select class="selectpicker form-control">
+                    <option value="">Car</option>
+                    <option value="">Van</option>
+                    <option value="">Truck</option>
+                    <option value="">Something</option>
+                  </select>
+                </td>
+                <td><input type="text" value="12" style="width: 100%;"></td>
+                <td>
+                  <select class="selectpicker form-control">
+                    <option value="">Depot Name 1</option>
+                    <option value="">Depot Name 2</option>
+                    <option value="">Depot Name 3</option>
+                    <option value="">Depot Name 4</option>
+                  </select>
+                </td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-check"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-times"></i></a></td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="alert alert-danger" style="margin-bottom: 0px;">
+                    <div class="pull-right" style="margin-top: -4px;">
+                      <button class="btn btn-danger">Delete</button>
+                      <button class="btn btn-default">Cancel</button>
+                    </div>
+                    <span class="pficon pficon-error-circle-o"></span>
+                    Are you sure you want to delete <strong>TLN 117</strong>?
+                  </div>
+                </td>
+              </tr>
+              <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
@@ -117,8 +171,7 @@
               </tr>
               <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
@@ -126,8 +179,7 @@
               </tr>
               <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
@@ -135,8 +187,7 @@
               </tr>
               <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
@@ -144,8 +195,7 @@
               </tr>
               <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
@@ -153,8 +203,7 @@
               </tr>
               <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
@@ -162,35 +211,7 @@
               </tr>
               <tr>
                 <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
-                <td>14</td>
-                <td>Depot Name 1</td>
-                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
-                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
-              </tr>
-              <tr>
-                <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
-                <td>14</td>
-                <td>Depot Name 1</td>
-                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
-                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
-              </tr>
-              <tr>
-                <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
-                <td>14</td>
-                <td>Depot Name 1</td>
-                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
-                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
-              </tr>
-              <tr>
-                <td>TLN 117</td>
-                <td>Isuzu</td>
-                <td>NPR</td>
+                <td>Van</td>
                 <td>14</td>
                 <td>Depot Name 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>

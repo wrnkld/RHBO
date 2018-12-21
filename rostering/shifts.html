@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptaPlanner - Employee Rostering - Shifts</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
+  <link href="../css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-pf">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-5">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../main.html">OptaPlanner</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-collapse-5">
+      <ul class="nav navbar-nav navbar-utility">
+        <li><a href="notifications.html"><i class="fa fa-bell"></i><span class="bluedot"></span></a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tenants <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Call Center</li>
+            <li><a href="#">Santa Barbara (70 employees)</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Factory Assembly</li>
+            <li><a href="#">El Paso (168 employees)</a></li>
+            <li><a href="#">Fort Collins (168 employees)</a></li>
+            <li><a href="#">Little Rock (84 employees)</a></li>
+            <li><a href="#">Mt. Vernon (336 employees)</a></li>
+            <li><a href="#">San Francisco (84 employees)</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Guard Security</li>
+            <li><a href="#">Las Vegas (70 employees)</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Hospital</li>
+            <li><a href="#">Los Angeles (98 employees)</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Add Tenant</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Christopher <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Rest API</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="../index.html">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-primary">
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="employees.html">Employees</a></li>
+        <li class="active"><a href="shifts.html">Shifts</a></li>
+        <li><a href="availability.html">Availability</a></li>
+        <li><a href="roster.html">Roster</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Shifts</h1>
+      </div>
+    </div>
+    <div class="row" id="toolbar">
+      <div class="col-xs-6">
+        <form class="search-pf has-button">
+          <div class="form-group has-clear">
+            <div class="search-pf-input-group">
+              <label for="search1" class="sr-only">Search</label>
+              <input id="search1" type="search" class="form-control" placeholder="Search">
+              <button type="button" class="clear" aria-hidden="true" style="display: none;"><span class="pficon pficon-close"></span></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-6">
+        <div style="display: inline; float: right;">
+          <button type="button" class="btn btn-primary">Add Shift</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%">Locations</th>
+                <th style="width: 25%">Days</th>
+                <th style="width: 25%">Start Time</th>
+                <th style="width: 25%">End Time</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select class="selectpicker form-control" multiple data-selected-text-format="count>3">
+                    <option value="">Location Name</option>
+                    <option value="">Location Name</option>
+                    <option value="">Location Name</option>
+                    <option value="">Location Name</option>
+                    <option value="">Location Name</option>
+                    <option value="">Location Name</option>
+                    <option value="">Location Name</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="selectpicker form-control" multiple data-selected-text-format="count>3">
+                    <option value="">Day Name</option>
+                    <option value="">Day Name</option>
+                    <option value="">Day Name</option>
+                    <option value="">Day Name</option>
+                    <option value="">Day Name</option>
+                    <option value="">Day Name</option>
+                    <option value="">Day Name</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="input-group date-time-picker-pf" id="datetimepicker2" style="width: 100%;">
+                    <input type="text" class="form-control">
+                    <span class="input-group-addon">
+                      <span class="fa fa-clock-o"></span>
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div class="input-group date-time-picker-pf" id="datetimepicker3" style="width: 100%;">
+                    <input type="text" class="form-control">
+                    <span class="input-group-addon">
+                      <span class="fa fa-clock-o"></span>
+                    </span>
+                  </div>
+                </td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-check"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-times"></i></a></td>
+              </tr>
+              <tr>
+                <td>Location Name, Location Name, Location Name</td>
+                <td>Day 4, Day 7, Day 9, Day 12, Day 13</td>
+                <td>Start Time</td>
+                <td>End Time</td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>Location Name, Location Name, Location Name</td>
+                <td>Day 4, Day 7, Day 9, Day 12, Day 13</td>
+                <td>Start Time</td>
+                <td>End Time</td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>Location Name, Location Name, Location Name</td>
+                <td>Day 4, Day 7, Day 9, Day 12, Day 13</td>
+                <td>Start Time</td>
+                <td>End Time</td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+              </tr>
+              <tr>
+                <td>Location Name, Location Name, Location Name</td>
+                <td>Day 4, Day 7, Day 9, Day 12, Day 13</td>
+                <td>Start Time</td>
+                <td>End Time</td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
+                <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.14.0/js/patternfly.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <script>
+  $(function () {
+    $('#datetimepicker2').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true,
+      keyBinds: {
+        enter: function () {
+          this.hide();
+        }
+      }
+    });
+    $('#datetimepicker3').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true,
+      keyBinds: {
+        enter: function () {
+          this.hide();
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OptaPlanner</title>
+  <title>OptaPlanner - Employee Rostering - Employees</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
-  <link href="css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="../css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
   <nav class="navbar navbar-default navbar-pf">
@@ -17,7 +17,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">OptaPlanner</a>
+      <a class="navbar-brand" href="../main.html">OptaPlanner</a>
     </div>
     <div class="collapse navbar-collapse navbar-collapse-5">
       <ul class="nav navbar-nav navbar-utility">
@@ -50,7 +50,7 @@
             <li><a href="#">Rest API</a></li>
             <li><a href="#">Settings</a></li>
             <li class="divider"></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="../index.html">Log Out</a></li>
           </ul>
         </li>
       </ul>
@@ -58,7 +58,7 @@
         <li><a href="skills.html">Skills</a></li>
         <li><a href="locations.html">Locations</a></li>
         <li class="active"><a href="employees.html">Employees</a></li>
-        <li><a href="rotation.html">Rotation</a></li>
+        <li><a href="shifts.html">Shifts</a></li>
         <li><a href="availability.html">Availability</a></li>
         <li><a href="roster.html">Roster</a></li>
       </ul>
@@ -109,10 +109,16 @@
           </thead>
           <tbody>
             <tr>
-              <td>Employee Name</td>
-              <td>Some Skill, Some Skill</td>
-              <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
-              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+              <td colspan="4">
+                <div class="alert alert-danger" style="margin-bottom: 0px;">
+                  <div class="pull-right" style="margin-top: -4px;">
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-default">Cancel</button>
+                  </div>
+                  <span class="pficon pficon-error-circle-o"></span>
+                  Are you sure you want to delete <strong>Amy Fox</strong>?
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Employee Name</td>

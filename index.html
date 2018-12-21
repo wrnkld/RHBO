@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="login-pf">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,108 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
   <link href="css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
+  <style>
+  .login-pf-brand {
+    margin-top: 40px;
+    max-width: 360px;
+    width: 70%;
+  }
+  .login-pf-page-header p {
+    color: #fff;
+    font-size: 14px;
+    margin: 20px auto 40px auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  .login-pf-page .login-pf-page-footer-links li:not(:last-of-type):after {
+    content: ".";
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: -10px;
+  }
+  .input-lg {
+    height: 36px;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1.3333333;
+    border-radius: 1px;
+  }
+  .login-pf-page-header {
+    text-align: center;
+  }
+  .card-pf {
+    padding: 20px 40px 30px 40px;
+  }
+  .login-pf-header {
+    margin-bottom: 20px;
+  }
+  .login-pf-signup {
+    color: #72767b;
+    margin: 20px 0 0;
+    font-size: 15px;
+    text-align: center;
+  }
+  .login-pf-page-footer {
+    display: flex;
+    justify-content: center;
+  }
+  .login-pf-settings {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .checkbox-label {
+    color: #72767b;
+    font-weight: 300;
+  }
+  .btn-lg {
+    margin-top: 20px;
+  }
+  .login-pf-signup a {
+    margin-left: 10px;
+  }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-pf">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">OptaPlanner</a>
-    </div>
-  </nav>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <ul style="margin-top: 20px;">
-          <li><a href="skills.html">Employee Rostering</a></li>
-          <li><a href="depots.html">Vehicle Routing</a></li>
-        </ul>
+  <div class="login-pf-page">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+          <header class="login-pf-page-header">
+            <img class="login-pf-brand" src="https://rawgit.com/patternfly/patternfly/master-dist/dist//img/Logo_Horizontal_Reversed.svg" alt="PatternFly logo"/>
+            <p>OptaPlanner is a constraint solver. It optimizes business resource planning use cases, such as Vehicle Routing, Employee Rostering, Cloud Optimization, Task Assignment, Conference Scheduling, Job Scheduling, Bin Packing and many more.</p>
+          </header>
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+              <div class="card-pf">
+                <header class="login-pf-header">
+                  <h1>Log In to Your Account</h1>
+                </header>
+                <form>
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control  input-lg" id="exampleInputEmail1" placeholder="Email address">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only"  for="exampleInputPassword1">Password
+                    </label>
+                    <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group login-pf-settings">
+                    <label class="checkbox-label">
+                      <input type="checkbox"> Keep me logged in for 30 days
+                    </label>
+                    <a href="#">Forgot password?</a>
+                  </div>
+                  <a href="main.html" class="btn btn-primary btn-block btn-lg">Log In</a>
+                </form>
+                <p class="login-pf-signup">Need an account?<a href="#">Sign up</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
