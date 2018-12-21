@@ -66,13 +66,10 @@
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-4">
-        <h1>Roster</h1>
+      <div class="col-xs-5">
+        <h1>Roster for <input type="week" value="2018-W52" style="border: 0; background: transparent; color: #0088ce;"></h1>
       </div>
-      <div class="col-xs-4">
-<input type="week" value="2018-W52">
-      </div>
-      <div class="col-xs-4">
+      <div class="col-xs-7">
         <div style="float: right; margin-top: 20px;">
           <a href="#" class="btn btn-default" data-toggle="modal" data-target="#rightmodal2" style="margin-left: 10px;">Add Shift</a>
           <button type="button" class="btn btn-default">Publish</button>
@@ -89,7 +86,7 @@
       </div>
     </div>
   </div>
-  <!-- sidebar -->
+  <!-- edit shift -->
   <div class="modal right fade" id="rightmodal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -253,9 +250,6 @@
       allowInputToggle: true
     });
     $('#datetimepicker5').datetimepicker({
-      allowInputToggle: true
-    });
-    $('#datetimepicker6').datetimepicker({
       allowInputToggle: true
     });
   });

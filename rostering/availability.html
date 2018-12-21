@@ -66,20 +66,12 @@
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-4">
-        <h1>Availability</h1>
+      <div class="col-xs-10">
+        <h1>Availability for <input type="week" value="2018-W52" style="border: 0; background: transparent; color: #0088ce;"></h1>
       </div>
-      <div class="col-xs-4">
-        <div class="input-group date-time-picker-pf" id="datetimepicker6" style="margin-top: 20px;">
-          <input type="text" class="form-control">
-          <span class="input-group-addon">
-            <span class="fa fa-calendar"></span>
-          </span>
-        </div>
-      </div>
-      <div class="col-xs-4">
+      <div class="col-xs-2">
         <div style="float: right; margin-top: 20px;">
-          <button type="button" class="btn btn-default">Add Availability</button>
+          <a href="#" data-toggle="modal" data-target="#rightmodal2" class="btn btn-default">Add Availability</a>
         </div>
       </div>
     </div>
@@ -87,10 +79,163 @@
       <div class="col-md-12">
         <div class="blank-slate-pf" style="min-height: 200px;">
           <h1>Calendar</h1>
-          <p>Wire up add button.</p>
+          <p>Example <a href="#" data-toggle="modal" data-target="#rightmodal">edit availability</a>.</p>
         </div>
       </div>
     </div>
+  </div>
+  <!-- edit shift -->
+  <div class="modal right fade" id="rightmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span class="pficon pficon-close"></span></button>
+          <h4 class="modal-title">Edit Availability</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="control-label">From</label>
+            <div class="input-group date-time-picker-pf" id="datetimepicker2">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">To</label>
+            <div class="input-group date-time-picker-pf" id="datetimepicker3">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Location</label>
+            <select class="selectpicker form-control">
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Employee</label>
+            <select class="selectpicker form-control">
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Availability</label>
+            <div class="radio" style="margin-top: 0;"><label><input type="radio" checked name="Availability"> Desired</label></div>
+            <div class="radio"><label><input type="radio" name="Availability"> Undesired</label></div>
+            <div class="radio"><label><input type="radio" name="Availability"> Unavailable</label></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add shift -->
+  <div class="modal right fade" id="rightmodal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span class="pficon pficon-close"></span></button>
+          <h4 class="modal-title">Add Availability</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="control-label">From</label>
+            <div class="input-group date-time-picker-pf" id="datetimepicker4">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">To</label>
+            <div class="input-group date-time-picker-pf" id="datetimepicker5">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">
+                <span class="fa fa-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Location</label>
+            <select class="selectpicker form-control">
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+              <option value="">Location</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Employee</label>
+            <select class="selectpicker form-control">
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+              <option value="">Employee</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Availability</label>
+            <div class="radio" style="margin-top: 0;"><label><input type="radio" checked name="Availability"> Desired</label></div>
+            <div class="radio"><label><input type="radio" name="Availability"> Undesired</label></div>
+            <div class="radio"><label><input type="radio" name="Availability"> Unavailable</label></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.14.0/js/patternfly.min.js"></script>
@@ -99,9 +244,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
   <script>
   $(function () {
-    $('#datetimepicker6').datetimepicker({
-      allowInputToggle: true,
-      format: 'L'
+    $('#datetimepicker2').datetimepicker({
+      allowInputToggle: true
+    });
+    $('#datetimepicker3').datetimepicker({
+      allowInputToggle: true
+    });
+    $('#datetimepicker4').datetimepicker({
+      allowInputToggle: true
+    });
+    $('#datetimepicker5').datetimepicker({
+      allowInputToggle: true
     });
   });
   </script>
