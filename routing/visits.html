@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OptaPlanner - Vehicle Routing - Locations</title>
+  <title>OptaPlanner - Vehicle Routing - Visits</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
   <link href="../css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
@@ -52,8 +52,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-primary">
         <li><a href="depots.html">Depots</a></li>
+        <li><a href="models.html">Models</a></li>
         <li><a href="vehicles.html">Vehicles</a></li>
-        <li class="active"><a href="locations.html">Locations</a></li>
+        <li class="active"><a href="visits.html">Visits</a></li>
         <li><a href="route.html">Route</a></li>
       </ul>
     </div>
@@ -61,7 +62,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Locations</h1>
+        <h1>Visits</h1>
       </div>
     </div>
     <div class="row">
@@ -69,37 +70,37 @@
         <form class="search-pf search-pf-side has-button">
           <div class="form-group has-clear">
             <div class="search-pf-input-group">
-              <label for="search1" class="sr-only">Search to add location</label>
-              <input id="search1" type="search" class="form-control" placeholder="Search to add location">
+              <label for="search1" class="sr-only">Search to add visit</label>
+              <input id="search1" type="search" class="form-control" placeholder="Search to add visit">
               <button type="button" class="clear" aria-hidden="true" style="display: none;"><span class="pficon pficon-close"></span></button>
             </div>
           </div>
           <div class="form-group">
-            <a class="btn btn-default" href="locations_results.html"><span class="fa fa-search"></span></a>
+            <a class="btn btn-default" href="visits_results.html"><span class="fa fa-search"></span></a>
           </div>
         </form>
         <table>
           <thead>
             <tr>
-              <th style="width: 100%">Location Name</th>
+              <th style="width: 100%">Visit Name</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Location 1<div><a href="#">Add Time Window</a></div></td>
+              <td>Visit 1<div><a href="#" data-toggle="modal" data-target="#timewindow">Add Time Window</a></div></td>
+              <td><a href="#"  class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
+            </tr>
+            <tr>
+              <td>Visit 2<div><a href="#" data-toggle="modal" data-target="#timewindow">Time Window</a></div></td>
               <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
             </tr>
             <tr>
-              <td>Location 2<div><a href="#">Time Window</a></div></td>
+              <td>Visit 3<div><a href="#" data-toggle="modal" data-target="#timewindow">Time Window</a></div></td>
               <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
             </tr>
             <tr>
-              <td>Location 3<div><a href="#">Time Window</a></div></td>
-              <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
-            </tr>
-            <tr>
-              <td>Location 4<div><a href="#">Add Time Window</a></div></td>
+              <td>Visit 4<div><a href="#" data-toggle="modal" data-target="#timewindow">Add Time Window</a></div></td>
               <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
             </tr>
           </tbody>
@@ -112,9 +113,58 @@
       </div>
     </div>
   </div>
+  <!-- time window -->
+  <div class="modal fade" id="timewindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span class="pficon pficon-close"></span></button>
+          <h4 class="modal-title">Time Window</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="control-label">From</label>
+            <div class="input-group time-picker-pf" id="datetimepicker2">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">
+                <span class="fa fa-clock-o"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">To</label>
+            <div class="input-group time-picker-pf" id="datetimepicker3">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">
+                <span class="fa fa-clock-o"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.14.0/js/patternfly.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <script>
+  $(function () {
+    $('#datetimepicker2').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true
+    });
+    $('#datetimepicker3').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true
+    });
+  });
+  </script>
 </body>
 </html>

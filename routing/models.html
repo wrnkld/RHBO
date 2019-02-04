@@ -52,8 +52,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-primary">
         <li><a href="depots.html">Depots</a></li>
-        <li><a href="models.html">Models</a></li>
-        <li class="active"><a href="vehicles.html">Vehicles</a></li>
+        <li class="active"><a href="models.html">Models</a></li>
+        <li><a href="vehicles.html">Vehicles</a></li>
         <li><a href="visits.html">Visits</a></li>
         <li><a href="route.html">Route</a></li>
       </ul>
@@ -62,7 +62,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Vehicles</h1>
+        <h1>Models</h1>
       </div>
     </div>
     <div class="row" id="toolbar">
@@ -87,7 +87,7 @@
             <button type="button" class="btn btn-default" style="padding: 2px 10px;"><span class="i fa fa-angle-left"></span></button>
             <button type="button" class="btn btn-default" style="padding: 2px 10px;"><span class="i fa fa-angle-right"></span></button>
           </div>
-          <button type="button" class="btn btn-primary" style="margin-left: 10px;">Add Vehicle</button>
+          <button type="button" class="btn btn-primary" style="margin-left: 10px;">Add Model</button>
         </div>
       </div>
     </div>
@@ -97,59 +97,37 @@
           <table>
             <thead>
               <tr>
-                <th style="width: 33%">Plate Number</th>
-                <th style="width: 34%">Model Type</th>
-                <th style="width: 33%">Depot</th>
+                <th style="width: 33%">Model Name</th>
+                <th style="width: 34%">Capacity</th>
+                <th style="width: 33%">Roads</th>
                 <th></th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" placeholder="ABC 123" style="width: 100%;"></td>
+                <td><input type="text" placeholder="Model Name" style="width: 100%;"></td>
+                <td><input type="text" placeholder="12" style="width: 100%;"></td>
                 <td>
                   <select class="selectpicker form-control">
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                  </select>
-                </td>
-                <td>
-                  <select class="selectpicker form-control">
-                    <option value="">Depot Name 1</option>
-                    <option value="">Depot Name 2</option>
-                    <option value="">Depot Name 3</option>
-                    <option value="">Depot Name 4</option>
+                    <option value="">Road Type 1</option>
+                    <option value="">Road Type 2</option>
+                    <option value="">Road Type 3</option>
+                    <option value="">Road Type 4</option>
                   </select>
                 </td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-check"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-times"></i></a></td>
               </tr>
               <tr>
-                <td><input type="text" value="ABC 123" style="width: 100%;"></td>
+                <td><input type="text" value="Model Name" style="width: 100%;"></td>
+                <td><input type="text" value="12" style="width: 100%;"></td>
                 <td>
                   <select class="selectpicker form-control">
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                    <option value="">Model Type</option>
-                  </select>
-                </td>
-                <td>
-                  <select class="selectpicker form-control">
-                    <option value="">Depot Name 1</option>
-                    <option value="">Depot Name 2</option>
-                    <option value="">Depot Name 3</option>
-                    <option value="">Depot Name 4</option>
+                    <option value="">Road Type 1</option>
+                    <option value="">Road Type 2</option>
+                    <option value="">Road Type 3</option>
+                    <option value="">Road Type 4</option>
                   </select>
                 </td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-check"></i></a></td>
@@ -163,56 +141,56 @@
                       <button class="btn btn-default">Cancel</button>
                     </div>
                     <span class="pficon pficon-error-circle-o"></span>
-                    Are you sure you want to delete <strong>TLN 117</strong>?
+                    Are you sure you want to delete <strong>Model Name</strong>?
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 3</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 2</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 4</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 3</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>
               <tr>
-                <td>TLN 117</td>
-                <td>Model Type</td>
-                <td>Depot Name 1</td>
+                <td>Model Name</td>
+                <td>14</td>
+                <td>Road Type 1</td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-pencil"></i></a></td>
                 <td><a href="#" class="btn btn-link"><i class="fa fa-trash-o"></i></a></td>
               </tr>

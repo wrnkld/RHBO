@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OptaPlanner - Vehicle Routing - Locations</title>
+  <title>OptaPlanner - Vehicle Routing - Visits</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly.min.css" rel="stylesheet" media="screen">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.22.1/css/patternfly-additions.min.css" rel="stylesheet" media="screen">
   <link href="../css/optaplanner.css" rel="stylesheet" type="text/css" media="screen">
@@ -52,8 +52,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-primary">
         <li><a href="depots.html">Depots</a></li>
+        <li><a href="models.html">Models</a></li>
         <li><a href="vehicles.html">Vehicles</a></li>
-        <li class="active"><a href="locations.html">Locations</a></li>
+        <li class="active"><a href="visits.html">Visits</a></li>
         <li><a href="route.html">Route</a></li>
       </ul>
     </div>
@@ -61,7 +62,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Locations</h1>
+        <h1>Visits</h1>
       </div>
     </div>
     <div class="row">
@@ -69,8 +70,8 @@
         <form class="search-pf search-pf-side has-button">
           <div class="form-group has-clear">
             <div class="search-pf-input-group">
-              <label for="search1" class="sr-only">Search to add location</label>
-              <input id="search1" type="search" class="form-control" placeholder="Search to add location">
+              <label for="search1" class="sr-only">Search to add visit</label>
+              <input id="search1" type="search" class="form-control" placeholder="Search to add visit">
               <button type="button" class="clear" aria-hidden="true" style="display: none;"><span class="pficon pficon-close"></span></button>
             </div>
           </div>
@@ -100,7 +101,7 @@
             </tr>
           </tbody>
         </table>
-        <div><a href="locations.html" class="btn btn-link"><i class="fa fa-caret-left" style="margin-right: 10px;"></i>Back to list</a></div>
+        <div><a href="visits.html" class="btn btn-link"><i class="fa fa-caret-left" style="margin-right: 10px;"></i>Back to list</a></div>
       </div>
       <div class="col-sm-9">
         <div class="map">
